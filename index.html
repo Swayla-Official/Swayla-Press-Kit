@@ -17,16 +17,16 @@ body {
 
 /* HERO */
 header {
-  height: 460px;
+  height:460px;
   background:url('https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesbeautyshot.jpg') center/cover no-repeat;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
 }
 header img {
   max-width:360px;
+  border-radius:16px;
   box-shadow:0 15px 40px rgba(0,0,0,.7);
-  border-radius:14px;
 }
 
 /* BIO */
@@ -52,7 +52,7 @@ header img {
   gap:20px;
   justify-content:center;
 }
-.widgets iframe, .widgets blockquote {
+.widgets iframe {
   border-radius:16px;
   box-shadow:0 10px 25px rgba(0,0,0,.7);
 }
@@ -67,7 +67,7 @@ header img {
   box-shadow:0 12px 30px rgba(0,0,0,.6);
 }
 
-/* MARQUEE FIXED */
+/* MARQUEE – TRUE LOOP */
 .marquee {
   overflow:hidden;
   white-space:nowrap;
@@ -79,8 +79,8 @@ header img {
   display:inline-block;
   padding-left:100%;
   animation: scroll 35s linear infinite;
-  color:#ffb347;
   font-weight:bold;
+  color:#ffb347;
 }
 @keyframes scroll {
   0% { transform:translateX(0); }
@@ -89,46 +89,34 @@ header img {
 
 /* SCRAPBOOK */
 .scrapbook {
-  position:relative;
   max-width:1200px;
   margin:90px auto;
   padding:20px;
 }
 
-/* CENTRAL IMAGE – NO FRAME */
-.centerpiece {
-  display:block;
-  max-width:520px;
-  margin:0 auto 60px;
-  box-shadow:0 20px 45px rgba(0,0,0,.8);
-  border-radius:18px;
-}
-
 /* FRAMED ITEMS */
 .frames {
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
   gap:26px;
+  margin-bottom:60px;
 }
-
 .frame {
-  position:relative;
-  max-width:220px;
+  max-width:210px;
   border:5px solid rgba(212,175,55,.85);
   border-radius:26% 12% 22% 14%;
   background:rgba(255,255,255,.05);
   box-shadow:0 8px 18px rgba(0,0,0,.7);
-  transition:.4s;
+  transition:.3s;
 }
-.frame:hover { transform:scale(1.06); }
+.frame:hover { transform:scale(1.05); }
 
-.frame img, .frame video {
+.frame img,
+.frame video {
   width:100%;
   display:block;
   border-radius:10px;
 }
-
 .caption {
   text-align:center;
   font-size:.9em;
@@ -137,16 +125,19 @@ header img {
   color:#ffd700;
 }
 
-/* PIN */
-.pin {
-  position:absolute;
-  top:-10px;
-  left:-10px;
-  width:22px;
-  height:22px;
-  background:radial-gradient(circle,#ffd700,#a77c1c);
-  border-radius:50%;
-  box-shadow:0 3px 6px rgba(0,0,0,.6);
+/* UNFRAMED FOCAL ROW */
+.center-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+  margin-bottom:70px;
+}
+.focus-image {
+  width:100%;
+  max-width:440px;
+  border-radius:18px;
+  box-shadow:0 22px 50px rgba(0,0,0,.8);
 }
 
 /* FOOTER */
@@ -165,13 +156,13 @@ footer img {
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/swaylalogowhite.png">
+  <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/swaylalogowhite.png" alt="Swayla Logo">
 </header>
 
 <section class="bio">
   <h2>About Swayla</h2>
   <p>Swayla is a soulful voice rooted in R&B, Afro-fusion and alternative soul. Her work bridges vulnerability and strength, tradition and experimentation.</p>
-  <p>She is also a radio host and cultural curator, spotlighting emerging voices through Rhythm & Bloom on DejaVu FM.</p>
+  <p>Alongside her music, she is a radio host and cultural curator, spotlighting emerging voices through Rhythm & Bloom on DejaVu FM.</p>
 
   <div class="widgets">
     <iframe src="https://open.spotify.com/embed/artist/6P6UibXHYdrs360xusf9VD" width="300" height="380"></iframe>
@@ -187,40 +178,53 @@ footer img {
 
 <section class="scrapbook">
 
-  <!-- CENTRAL IMAGE -->
-  <img class="centerpiece"
-    src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesgarden.jpg"
-    alt="Waves Garden BTS">
-
-  <!-- FRAMES AROUND -->
+  <!-- TOP FRAMES -->
   <div class="frames">
-
-    <div class="frame"><div class="pin"></div>
-      <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/bdaylive.jpg">
-      <div class="caption">Birthday Live Performance</div>
-    </div>
-
-    <div class="frame"><div class="pin"></div>
+    <div class="frame">
       <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/pianoshot.jpg">
       <div class="caption">Piano Session</div>
     </div>
 
-    <div class="frame"><div class="pin"></div>
+    <div class="frame">
       <video controls src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/nottinghillperformance.mp4"></video>
       <div class="caption">Notting Hill Arts Club – 2022</div>
     </div>
 
-    <div class="frame"><div class="pin"></div>
+    <div class="frame">
       <video controls src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesoutpromo.mp4"></video>
       <div class="caption">Waves Promo – 2023</div>
     </div>
+  </div>
 
-    <div class="frame"><div class="pin"></div>
+  <!-- UNFRAMED FOCAL IMAGES -->
+  <div class="center-row">
+    <img class="focus-image"
+         src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/bdaylive.jpg"
+         alt="Birthday Live Performance">
+
+    <img class="focus-image"
+         src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesgarden.jpg"
+         alt="Waves Garden BTS">
+  </div>
+
+  <!-- BOTTOM FRAMES -->
+  <div class="frames">
+    <div class="frame">
+      <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/closeupwaves.png">
+      <div class="caption">Waves Close-Up</div>
+    </div>
+
+    <div class="frame">
       <video controls src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/shortbyebyelive.mp4"></video>
       <div class="caption">Bye Bye Live – 2025</div>
     </div>
 
+    <div class="frame">
+      <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/djing.png">
+      <div class="caption">DJ Sway</div>
+    </div>
   </div>
+
 </section>
 
 <div class="marquee">
@@ -228,7 +232,7 @@ footer img {
 </div>
 
 <footer>
-  <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/logoblack.png">
+  <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/logoblack.png" alt="S logo">
   <div>© 2026 Swayla</div>
 </footer>
 
