@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-
 body {
   font-family: 'Arial', sans-serif;
   color: #fff;
@@ -18,27 +17,23 @@ body {
 header {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 450px;
   background: url('https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesbeautyshot.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header img {
-  max-width: 280px;
+  max-width: 300px;
   height: auto;
-  z-index: 2;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.7);
-  transition: transform 0.3s ease;
-}
-header img:hover {
-  transform: scale(1.05);
+  z-index:2;
 }
 
-/* Bio Section */
+/* Bio + Media Section */
 section.bio {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 60px auto;
   padding: 20px;
 }
@@ -49,34 +44,30 @@ section.bio h2 {
 }
 section.bio p {
   font-size: 1.1em;
-  margin-bottom: 15px;
   line-height: 1.6em;
+  margin-bottom: 15px;
 }
-.spotify-link {
-  display: inline-block;
-  background: #1db954;
-  padding: 10px 20px;
-  border-radius: 50px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
+.bio-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.bio-widgets iframe {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
 }
 
 /* Corkboard Section */
 section.corkboard {
   background: url('https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesalternative.jpg') center/cover no-repeat;
+  background-size: cover;
   border-radius: 15px;
-  padding: 80px 20px;
+  padding: 200px 20px;
   margin: 60px auto;
   max-width: 900px;
-  text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
-section.corkboard h2 {
-  color: #d4af37;
-  margin-bottom: 30px;
-  font-size: 2em;
 }
 
 /* Scrapbook Collage */
@@ -91,30 +82,45 @@ section.corkboard h2 {
   gap: 20px;
 }
 .collage-item {
+  position: relative;
   border: 8px solid rgba(212,175,55,0.8);
-  border-radius: 20px;
+  border-radius: 30% 10% 25% 15% / 20% 30% 10% 25%; /* curvy abstract frame */
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.7);
   background: rgba(255,255,255,0.05);
-  transform: rotate(calc(-5deg + 10deg * var(--i))) translateY(0);
   transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 .collage-item:hover {
-  transform: rotate(0deg) scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 15px 35px rgba(0,0,0,0.8);
 }
 .collage-item img, .collage-item video {
   display: block;
-  width: 250px;
-  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 .collage-item .caption {
   background: rgba(0,0,0,0.7);
-  color: #fff;
+  color: #ffd700;
   text-align: center;
-  padding: 5px 10px;
-  font-size: 0.9em;
+  padding: 8px 12px;
+  font-size: 1em;
   border-top: 2px solid #d4af37;
+  font-weight: bold;
+}
+
+/* 3D Pin */
+.pin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #d4af37 40%, #aa7f1f 100%);
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+  transform: rotate(-20deg);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5);
 }
 
 /* Rolling captions */
@@ -126,7 +132,7 @@ section.corkboard h2 {
   border-top: 2px solid #d4af37;
   border-bottom: 2px solid #d4af37;
   padding: 10px 0;
-  margin: 60px 0;
+  margin: 40px 0;
   background: rgba(0,0,0,0.5);
 }
 .marquee p {
@@ -148,6 +154,10 @@ footer {
   font-size: 0.9em;
   color: #ddd;
 }
+footer img.slogo {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
 </style>
 </head>
 <body>
@@ -160,54 +170,88 @@ footer {
   <h2>About Swayla</h2>
   <p>Swayla is a soulful voice emerging from the crossroads of R&B / Soul, Afro-fusion. Rooted in soulfully pop rhythms, her music bridges a traditional RnB flow with her own alternative, effortless cadence. Accompanied by her band “The Black Notes”, their synchronicity is palpable and electric. Drawing inspiration from her British, African, and Portuguese heritage, Swayla’s sound is rich, raw, and deeply emotive.</p>
   <p>Whether performing intimate ballads or rhythmic anthems, Swayla invites listeners into a world where vulnerability and strength coexist in every note. Beyond her artistry, she is a passionate advocate for cultural preservation and education, hosting her radio show <em>Rhythm & Bloom</em> on Dejavu FM, uplifting artists and communities alike.</p>
-  <a href="https://open.spotify.com/artist/6P6UibXHYdrs360xusf9VD" class="spotify-link" target="_blank">Listen on Spotify</a>
+
+  <div class="bio-widgets">
+    <!-- Spotify -->
+    <iframe src="https://open.spotify.com/embed/artist/6P6UibXHYdrs360xusf9VD" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <!-- Instagram example post -->
+    <iframe src="https://www.instagram.com/p/Cs7y3N7O2Hb/embed" width="300" height="380" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    <!-- YouTube channel -->
+    <iframe width="300" height="380" src="https://www.youtube.com/embed?listType=user_uploads&list=SwaylaOfficial" frameborder="0" allowfullscreen></iframe>
+  </div>
 </section>
 
-<section class="corkboard">
-  <h2>Waves Spotlight</h2>
-  <p>This is the statement corkboard piece. Let it shine — no media pinned on top.</p>
-</section>
+<section class="corkboard"></section>
 
 <div class="marquee">
-  <p>Live performances · Afro-fusion vibes · Behind the scenes · Soulful storytelling · London roots · Cultural advocacy ·</p>
+  <p>Radio host · Presenter · Songwriter · Live performances · Afro-fusion vibes · Behind the scenes · Soulful storytelling · London roots · Cultural advocacy ·</p>
+</div>
+<div class="marquee">
+  <p>YoungMax · Dishy Tangent · TheKetki · AYL · RyanWindross · TiNO · 808 WZRD · 58 · Deluzion · Klasszik · IAGU Global · VOXVIDEOX · BIGHANI · DEJAVU FM · EXT RADIO · MOSTWANTED2 · The S32H · ADF · MOBO's Unsung ·</p>
 </div>
 
 <section class="collage">
-  <div class="collage-item" style="--i:0;">
-    <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/bdaylive.jpg" alt="Birthday Live Performance">
+  <!-- Images -->
+  <div class="collage-item"><div class="pin"></div>
+    <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/bdaylive.jpg" alt="Birthday Live">
     <div class="caption">Live performance birthday special</div>
   </div>
-  <div class="collage-item" style="--i:1;">
+  <div class="collage-item"><div class="pin"></div>
     <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/btwwaves.jpg" alt="Behind the Waves">
     <div class="caption">Behind the scenes of Waves production</div>
   </div>
-  <div class="collage-item" style="--i:2;">
+  <div class="collage-item"><div class="pin"></div>
     <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/closeupwaves.png" alt="Close Up Waves">
     <div class="caption">Second hero shot for Waves</div>
   </div>
-  <div class="collage-item" style="--i:3;">
+  <div class="collage-item"><div class="pin"></div>
     <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/pianoshot.jpg" alt="Piano Playing">
     <div class="caption">Intimate piano performance</div>
   </div>
-  <div class="collage-item" style="--i:4;">
+  <div class="collage-item"><div class="pin"></div>
     <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesgarden.jpg" alt="Garden Shot">
     <div class="caption">Garden behind-the-scenes</div>
   </div>
-  <div class="collage-item" style="--i:5;">
+
+  <!-- Live Videos Group -->
+  <div class="collage-item"><div class="pin"></div>
     <video controls>
       <source src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/nottinghillperformance.mp4" type="video/mp4">
     </video>
-    <div class="caption">Notting Hill Arts Club Live Performance</div>
+    <div class="caption">Notting Hill Arts Club Live Performance – 2022</div>
   </div>
-  <div class="collage-item" style="--i:6;">
+  <div class="collage-item"><div class="pin"></div>
     <video controls>
       <source src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesoutpromo.mp4" type="video/mp4">
     </video>
-    <div class="caption">Official Waves Promo Video</div>
+    <div class="caption">Waves Promo Video – 2023</div>
+  </div>
+  <div class="collage-item"><div class="pin"></div>
+    <video controls>
+      <source src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/shortbyebyelive.mp4" type="video/mp4">
+    </video>
+    <div class="caption">Live performance of unreleased song ‘Bye Bye’ (TheKetki on guitar) – 2025</div>
+  </div>
+
+  <!-- Other Assets -->
+  <div class="collage-item"><div class="pin"></div>
+    <video controls>
+      <source src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/bothbts.mp4" type="video/mp4">
+    </video>
+    <div class="caption">B.O.T.H BTS</div>
+  </div>
+  <div class="collage-item"><div class="pin"></div>
+    <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/bothshot.png" alt="B.O.T.H Photoshoot">
+    <div class="caption">B.O.T.H Photoshoot</div>
+  </div>
+  <div class="collage-item"><div class="pin"></div>
+    <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/djing.png" alt="DJ Sway">
+    <div class="caption">DJ Sway Live</div>
   </div>
 </section>
 
 <footer>
+  <img class="slogo" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/logoblack.png" alt="S Logo"><br>
   &copy; 2026 Swayla. All rights reserved.
 </footer>
 
