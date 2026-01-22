@@ -5,10 +5,8 @@
 <title>Swayla – Press Kit</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-/* Reset */
 * { margin:0; padding:0; box-sizing:border-box; }
 
-/* Body */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #3a0c3f, #6b2a6f, #b45b84);
@@ -16,7 +14,6 @@ body {
   line-height: 1.5;
 }
 
-/* Header / Hero */
 header {
   text-align: center;
   padding: 60px 20px;
@@ -35,45 +32,37 @@ header p {
   color: #ddd;
 }
 
-/* Sections */
 section {
   max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
 }
 
-/* Headings */
 h2 {
   color: #d4af37;
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  to { opacity:1; transform: translateY(0); }
-}
+@keyframes fadeIn { to { opacity:1; transform: translateY(0); } }
 
-/* General gallery grid */
-.gallery {
+.gallery, .corkboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+
 .gallery-item {
   position: relative;
   background: #222;
-  border: 6px solid #d4af37; /* gold frame */
+  border: 6px solid #d4af37;
   padding: 5px;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.6);
   opacity: 0;
   transform: translateY(30px);
   animation: fadeIn 1s forwards;
 }
-.gallery-item img, .gallery-item video {
-  width: 100%;
-  display: block;
-}
+.gallery-item img, .gallery-item video { width: 100%; display: block; }
 .gallery-item .caption {
   background: rgba(0,0,0,0.7);
   color: #fff;
@@ -84,45 +73,29 @@ h2 {
   border-top: 2px solid #d4af37;
 }
 
-/* Waves Spotlight corkboard */
 .corkboard {
-  background: url('https://i.imgur.com/0cJ7H6x.jpg') no-repeat center center;
+  background: url('assets/wavesalternative.jpg') no-repeat center center;
   background-size: cover;
   padding: 50px 20px;
   border-radius: 10px;
   margin-bottom: 50px;
 }
-.corkboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 0.9em;
-  color: #ddd;
-}
+footer { text-align: center; padding: 40px 20px; font-size: 0.9em; color: #ddd; }
 </style>
 </head>
 <body>
 
-<!-- Header -->
 <header>
   <img src="assets/swaylalogowhite.png" alt="Swayla Logo">
   <h1>Swayla</h1>
   <p>R&B · Soul · Afro-fusion</p>
 </header>
 
-<!-- Biography -->
 <section>
   <h2>About Swayla</h2>
   <p>Swayla is a soulful voice emerging from the crossroads of R&B / Soul, Afro-fusion. Rooted in soulfully pop rhythms, her music bridges a traditional RnB flow with her own alternative, effortless cadence. Accompanied by her band “The Black Notes”, their synchronicity is palpable and electric. Drawing inspiration from her British, African, and Portuguese heritage, Swayla’s sound is rich, raw, and deeply emotive.</p>
 </section>
 
-<!-- Waves Spotlight -->
 <section class="corkboard">
   <h2>Waves Spotlight</h2>
   <div class="corkboard-grid">
@@ -155,15 +128,9 @@ footer {
       <div class="caption">Swayla playing piano, intimate moment</div>
     </div>
 
-    <div class="gallery-item">
-      <img src="assets/wavesalternative.jpg" alt="Waves Cover Art">
-      <div class="caption">Cover art for single “Waves”</div>
-    </div>
-
   </div>
 </section>
 
-<!-- Performances / Other Gallery -->
 <section>
   <h2>Performances & Media</h2>
   <div class="gallery">
@@ -189,14 +156,12 @@ footer {
   </div>
 </section>
 
-<!-- Contact -->
 <section>
   <h2>Contact</h2>
   <p>Email: <a href="mailto:swaylaofficial@gmail.com" style="color:#d4af37;">swaylaofficial@gmail.com</a></p>
   <p>Instagram: <a href="https://instagram.com/swaylaofficial" style="color:#d4af37;">@swaylaofficial</a></p>
 </section>
 
-<!-- Footer -->
 <footer>
   &copy; 2026 Swayla. All rights reserved.
 </footer>
