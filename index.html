@@ -39,8 +39,10 @@ header img {
 .bio h2 {
   text-align:center;
   color:#d4af37;
+  margin-top:40px;
   margin-bottom:20px;
 }
+.bio h2:first-child { margin-top:0; }
 .bio p {
   line-height:1.6;
   margin-bottom:16px;
@@ -101,7 +103,10 @@ header img {
   padding:20px;
 }
 
-/* CAROUSEL */
+/* CAROUSEL (shared by both galleries) */
+.carousel-block {
+  margin:0 auto;
+}
 .carousel {
   position:relative;
   max-width:640px;
@@ -163,7 +168,7 @@ header img {
   justify-content:center;
   gap:9px;
   margin-top:18px;
-  margin-bottom:70px;
+  margin-bottom:50px;
 }
 .dot {
   width:9px;
@@ -265,16 +270,57 @@ footer img {
 
     My estate growing up, had so much culture. Neighbours of every culture, we came together. The Carribbean culture is a huge part of my development. Childhood friends, neighbours, family.
     They all poured into me. My sound is rooted in Rhythm and Blues. But i'm a melting pot at the end of the day...
-    Which makes me experimental...
+    Which makes me experimental...</p>
 
-    <h2>Band</h2>
-    
-    I am honoured to currently be working with Foreign Shadows, a collective of extremely talented musicians; Annoh, Lawrence and George. I'm glad we've found eachother... 
-    You'll normally find Annoh on Guitar, Lawrence on Bass, George on the drums. But this can vary and change. We're fluid...
-  </p>
+  <h2>Band</h2>
+  <p>I am honoured to currently be working with Foreign Shadows, a collective of extremely talented musicians; Annoh, Lawrence and George. I'm glad we've found eachother... 
+    You'll normally find Annoh on Guitar, Lawrence on Bass, George on the drums. But this can vary and change. We're fluid...</p>
+
+  <!-- BAND CAROUSEL -->
+  <div class="carousel-block">
+    <div class="carousel">
+      <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20%26%20Foreign%20Shadows%20at%20OB%20PROMOTIONS.jpg" alt="Swayla and Foreign Shadows at OB Promotions">
+            <div class="carousel-caption">Swayla &amp; Foreign Shadows – OB Promotions</div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20%26%20Foreign%20Shadows%20at%20OB.jpg" alt="Swayla and Foreign Shadows at OB">
+            <div class="carousel-caption">Swayla &amp; Foreign Shadows – OB</div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20%26%20Foreign%20Shadows%20at%20The%20Roxy.jpg" alt="Swayla and Foreign Shadows at The Roxy">
+            <div class="carousel-caption">Swayla &amp; Foreign Shadows – The Roxy</div>
+          </div>
+
+          <div class="carousel-item">
+            <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20%26%20Foreign%20Shadows%20at%20The%20Roxy.MOV"></video>
+            <div class="carousel-caption">The Roxy – Live</div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20and%20Foreign%20Shadows%20at%20LVLS.jpg" alt="Swayla and Foreign Shadows at LVLS">
+            <div class="carousel-caption">Swayla and Foreign Shadows – LVLS</div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20and%20Foreign%20Shadows%20at%20The%20Roxy.jpg" alt="Swayla and Foreign Shadows at The Roxy">
+            <div class="carousel-caption">Swayla and Foreign Shadows – The Roxy</div>
+          </div>
+
+        </div>
+      </div>
+      <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+    </div>
+    <div class="carousel-dots"></div>
+  </div>
 
   <h2>Radio and Hosting</h2>
-  
   <p>I curated the Rhythm & Bloom show on DejaVu FM. Every Saturday 1-3pm. I needed a space to speak, and be spoken to. 
     I needed a place to showcase the art and creatives around me, the talent i'm thankful enough to be surrounded by everyday. 
     All around me are inspirational people, building beautiful lives. This is a chance for me to spotlight them and their work. Music is healing, Music saves,
@@ -304,46 +350,48 @@ footer img {
 <section class="scrapbook">
 
   <!-- CAROUSEL (formerly gold-framed items) -->
-  <div class="carousel">
-    <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
-    <div class="carousel-viewport">
-      <div class="carousel-track">
+  <div class="carousel-block">
+    <div class="carousel">
+      <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+      <div class="carousel-viewport">
+        <div class="carousel-track">
 
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/pianoshot.jpg" alt="Piano session">
-          <div class="carousel-caption">Piano Session</div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/pianoshot.jpg" alt="Piano session">
+            <div class="carousel-caption">Piano Session</div>
+          </div>
+
+          <div class="carousel-item">
+            <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/nottinghillperformance.mp4"></video>
+            <div class="carousel-caption">Notting Hill Arts Club – 2022</div>
+          </div>
+
+          <div class="carousel-item">
+            <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesoutpromo.mp4"></video>
+            <div class="carousel-caption">Waves Promo – 2023</div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/closeupwaves.png" alt="Waves close-up">
+            <div class="carousel-caption">Waves Close-Up</div>
+          </div>
+
+          <div class="carousel-item">
+            <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/shortbyebyelive.mp4"></video>
+            <div class="carousel-caption">Bye Bye Live – 2025</div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/djing.png" alt="DJ Sway">
+            <div class="carousel-caption">DJ Sway</div>
+          </div>
+
         </div>
-
-        <div class="carousel-item">
-          <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/nottinghillperformance.mp4"></video>
-          <div class="carousel-caption">Notting Hill Arts Club – 2022</div>
-        </div>
-
-        <div class="carousel-item">
-          <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/wavesoutpromo.mp4"></video>
-          <div class="carousel-caption">Waves Promo – 2023</div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/closeupwaves.png" alt="Waves close-up">
-          <div class="carousel-caption">Waves Close-Up</div>
-        </div>
-
-        <div class="carousel-item">
-          <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/shortbyebyelive.mp4"></video>
-          <div class="carousel-caption">Bye Bye Live – 2025</div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/djing.png" alt="DJ Sway">
-          <div class="carousel-caption">DJ Sway</div>
-        </div>
-
       </div>
+      <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
     </div>
-    <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+    <div class="carousel-dots"></div>
   </div>
-  <div class="carousel-dots"></div>
 
   <!-- UNFRAMED FOCAL IMAGES -->
   <div class="center-row">
@@ -369,47 +417,55 @@ footer img {
 
 <script>
 (function () {
-  var track = document.querySelector('.carousel-track');
-  var items = track.children;
-  var total = items.length;
-  var index = 0;
-  var dotsContainer = document.querySelector('.carousel-dots');
+  function initCarousel(block) {
+    var track = block.querySelector('.carousel-track');
+    var items = track.children;
+    var total = items.length;
+    var index = 0;
+    var dotsContainer = block.querySelector('.carousel-dots');
+    var prevBtn = block.querySelector('.carousel-btn.prev');
+    var nextBtn = block.querySelector('.carousel-btn.next');
 
-  for (var i = 0; i < total; i++) {
-    (function (i) {
-      var dot = document.createElement('button');
-      dot.className = 'dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      dot.addEventListener('click', function () { goTo(i); });
-      dotsContainer.appendChild(dot);
-    })(i);
-  }
-
-  function update() {
-    track.style.transform = 'translateX(-' + (index * 100) + '%)';
-    var dots = dotsContainer.children;
-    for (var d = 0; d < dots.length; d++) {
-      dots[d].classList.toggle('active', d === index);
+    for (var i = 0; i < total; i++) {
+      (function (i) {
+        var dot = document.createElement('button');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', function () { goTo(i); });
+        dotsContainer.appendChild(dot);
+      })(i);
     }
-  }
 
-  function goTo(i) {
-    index = (i + total) % total;
+    function update() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      var dots = dotsContainer.children;
+      for (var d = 0; d < dots.length; d++) {
+        dots[d].classList.toggle('active', d === index);
+      }
+    }
+
+    function goTo(i) {
+      index = (i + total) % total;
+      update();
+    }
+
+    prevBtn.addEventListener('click', function () { goTo(index - 1); });
+    nextBtn.addEventListener('click', function () { goTo(index + 1); });
+
+    var startX = 0;
+    track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { goTo(diff > 0 ? index + 1 : index - 1); }
+    }, { passive: true });
+
     update();
   }
 
-  document.querySelector('.carousel-btn.prev').addEventListener('click', function () { goTo(index - 1); });
-  document.querySelector('.carousel-btn.next').addEventListener('click', function () { goTo(index + 1); });
-
-  // swipe support
-  var startX = 0;
-  track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend', function (e) {
-    var diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) { goTo(diff > 0 ? index + 1 : index - 1); }
-  }, { passive: true });
-
-  update();
+  var blocks = document.querySelectorAll('.carousel-block');
+  for (var b = 0; b < blocks.length; b++) {
+    initCarousel(blocks[b]);
+  }
 })();
 </script>
 
