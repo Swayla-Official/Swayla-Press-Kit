@@ -213,6 +213,48 @@ footer img {
   margin-bottom:10px;
 }
 
+/* SINGLE BIO IMAGES */
+.bio-image {
+  display:block;
+  max-width:500px;
+  width:100%;
+  margin:10px auto 30px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.7);
+}
+
+.podcast-logo {
+  display:block;
+  max-width:260px;
+  width:60%;
+  margin:10px auto 30px;
+  border-radius:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.6);
+}
+
+.podcast-embeds {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+  margin-bottom:30px;
+}
+.podcast-item {
+  width:100%;
+  max-width:660px;
+  text-align:center;
+}
+.podcast-title {
+  color:#ffd700;
+  font-size:.95em;
+  margin-bottom:10px;
+  font-weight:bold;
+}
+.podcast-item iframe {
+  width:100%;
+  border-radius:12px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   header { height:320px; }
@@ -223,6 +265,9 @@ footer img {
 
   .widgets { gap:14px; }
   .widgets iframe { height:340px; }
+
+  .bio-image { max-width:100%; }
+  .podcast-logo { max-width:200px; }
 
   .corkboard { height:280px; margin:50px auto; }
 
@@ -272,6 +317,8 @@ footer img {
     They all poured into me. My sound is rooted in Rhythm and Blues. But i'm a melting pot at the end of the day...
     Which makes me experimental...</p>
 
+  <img class="bio-image" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20at%20The%20Roxy.jpg" alt="Swayla at The Roxy">
+
   <h2>Band</h2>
   <p>I am honoured to currently be working with Foreign Shadows, a collective of extremely talented musicians; Annoh, Lawrence and George. I'm glad we've found eachother... 
     You'll normally find Annoh on Guitar, Lawrence on Bass, George on the drums. But this can vary and change. We're fluid...</p>
@@ -299,7 +346,7 @@ footer img {
           </div>
 
           <div class="carousel-item">
-            <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20%26%20Foreign%20Shadows%20at%20The%20Roxy.mp4"></video>
+            <video controls playsinline preload="metadata" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Swayla%20%26%20Foreign%20Shadows%20at%20The%20Roxy.MOV"></video>
             <div class="carousel-caption">The Roxy – Live</div>
           </div>
 
@@ -325,6 +372,25 @@ footer img {
     I needed a place to showcase the art and creatives around me, the talent i'm thankful enough to be surrounded by everyday. 
     All around me are inspirational people, building beautiful lives. This is a chance for me to spotlight them and their work. Music is healing, Music saves,
    Music evolves minds and hearts. It has to be well intentioned though, thats the caveat...</p>
+
+  <img class="podcast-logo" src="https://raw.githubusercontent.com/Swayla-Official/Swayla-Press-Kit/main/Rhythm%20and%20Bloom%20Show%20on%20DejavuFM.png" alt="Rhythm and Bloom Show on DejaVu FM">
+
+  <div class="podcast-embeds">
+    <div class="podcast-item">
+      <div class="podcast-title">Rhythm &amp; Bloom – EP 18: Solo Music Review</div>
+      <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="175"
+              style="width:100%;max-width:660px;overflow:hidden;border-radius:12px;"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.podcasts.apple.com/gb/podcast/dejavufm-podcasts/id1486498587?i=1000756737864"></iframe>
+    </div>
+    <div class="podcast-item">
+      <div class="podcast-title">Rhythm &amp; Bloom ft. Keisha Bobbi (S2, E9)</div>
+      <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="175"
+              style="width:100%;max-width:660px;overflow:hidden;border-radius:12px;"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.podcasts.apple.com/gb/podcast/dejavufm-podcasts/id1486498587?i=1000762020886"></iframe>
+    </div>
+  </div>
 
   <div class="widgets">
     <iframe src="https://open.spotify.com/embed/artist/6P6UibXHYdrs360xusf9VD?utm_source=generator"
